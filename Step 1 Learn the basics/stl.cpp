@@ -29,6 +29,10 @@ void vect()
         cout << v1[i] << " ";
     }
     cout << endl;
+    
+    vector<int>::iterator it = v1.begin();
+    it++;
+    cout<<*(it);
 
     v1.erase(v1.begin() + 4);
     // printing v1 using iterators

@@ -17,12 +17,16 @@ public:
   // You write the core logic here
   int findLargest() {
     int n = arr.size();
-    int first =-1;
+    if(n<2) return -1;
+    int first =INT_MIN;
     int second =0;
     for(int i=0; i<n; i++){
       if(arr[i] > first){
         second = first;
         first = arr[i];
+      }
+      else if(arr[i] > second && arr[i] != first){
+        second = arr[i];
       }
     }
     return second;

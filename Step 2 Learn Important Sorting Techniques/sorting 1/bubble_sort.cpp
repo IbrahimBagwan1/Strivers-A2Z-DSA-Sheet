@@ -26,4 +26,5 @@ int main(){
   for(int ele: arr){
     cout<< ele<< " ";
   }
+  return 0;
 }

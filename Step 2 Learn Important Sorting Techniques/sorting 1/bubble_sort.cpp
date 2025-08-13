@@ -20,8 +20,8 @@ void bubble_sort(int arr[], int n){
 
 int main(){
   int arr[] = {2,3,5,1,9,8,7,6,4};
-  int n = sizeof(arr)/ sizeof(arr[0]);
   // int n = 9;
+  int n = sizeof(arr)/ sizeof(arr[0]);
   bubble_sort(arr, n);
   for(int ele: arr){
     cout<< ele<< " ";

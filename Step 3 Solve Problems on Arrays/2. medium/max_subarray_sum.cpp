@@ -15,7 +15,7 @@ int maximum_sum(vector<int> &nums){
       sum=0;
     }
     cout<<" Iteration "<<i<<" The Sum is: "<<sum<<endl;
-  }
+  } 
   return maxi;
 }
 

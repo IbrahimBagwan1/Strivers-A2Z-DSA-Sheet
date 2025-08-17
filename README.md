@@ -1,4 +1,5 @@
 # 📘 Striver's A2Z DSA Sheet – Complete Solutions
+# My advice: Don’t rush. The sheet is not about just finishing → it’s about mastering concepts.
 
 Welcome to my journey through the [Striver's A2Z DSA Sheet](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2) 🚀 — a comprehensive roadmap to mastering Data Structures and Algorithms. This repository contains detailed solutions to 450+ curated problems, organized from basics to advanced topics, ideal for interview preparation and strengthening core CS fundamentals.
 

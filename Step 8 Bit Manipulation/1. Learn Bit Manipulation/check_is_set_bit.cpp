@@ -6,6 +6,9 @@ public:
     bool checkIthBit(int n, int i) {
         return (n >> i) & 1;   // check if i-th bit is set
     }
+    bool checkIthBitLeftShift(int n, int i){
+        return (n & (1<<i));
+    }
 };
 
 int main() {

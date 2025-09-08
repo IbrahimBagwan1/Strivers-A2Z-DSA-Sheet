@@ -3,7 +3,7 @@ using namespace std;
 
 class Solution {
 public:
-    bool checkIthBit(int n, int i) {
+    bool checkIthBitRightShift(int n, int i) {
         return (n >> i) & 1;   // check if i-th bit is set
     }
     bool checkIthBitLeftShift(int n, int i){

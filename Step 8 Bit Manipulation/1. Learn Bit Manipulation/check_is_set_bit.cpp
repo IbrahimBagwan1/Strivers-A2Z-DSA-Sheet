@@ -19,7 +19,7 @@ int main() {
 
     for (int i = 0; i < 4; i++) {
         cout << "Bit " << i << ": " 
-             << (sol.checkIthBit(n, i) ? "SET" : "NOT SET") << endl;
+             << (sol.checkIthBitRightShift(n, i) ? "SET" : "NOT SET") << endl;
     }
 
     return 0;

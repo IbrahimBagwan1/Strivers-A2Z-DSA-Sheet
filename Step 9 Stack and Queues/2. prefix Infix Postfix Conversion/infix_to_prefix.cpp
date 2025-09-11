@@ -72,9 +72,9 @@ int main() {
     string expr2 = "(a+b)*c";
     string expr3 = "a+b*(c^d-e)^(f+g*h)-i";
 
-    cout << "Infix: " << expr1 << "  →  Prefix: " << infixToPrefix(expr1) << endl;
-    cout << "Infix: " << expr2 << "  →  Prefix: " << infixToPrefix(expr2) << endl;
-    cout << "Infix: " << expr3 << "  →  Prefix: " << infixToPrefix(expr3) << endl;
+    cout << "Infix: " << expr1 << "  :  Prefix: " << infixToPrefix(expr1) << endl;
+    cout << "Infix: " << expr2 << "  :  Prefix: " << infixToPrefix(expr2) << endl;
+    cout << "Infix: " << expr3 << "  :  Prefix: " << infixToPrefix(expr3) << endl;
 
     return 0;
 }

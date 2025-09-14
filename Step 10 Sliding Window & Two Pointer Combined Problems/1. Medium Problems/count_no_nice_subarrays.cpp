@@ -10,7 +10,7 @@ public:
         int sum = 0, count = 0;
 
         while(r < n){
-            sum += nums[r] % 2;   // ✅ counts odds
+            sum += nums[r] % 2;   // counts odds
             while(sum > goal){
                 sum -= nums[l] % 2;
                 l++;
@@ -29,7 +29,6 @@ public:
 int main() {
     Solution sol;
 
-    // Hardcoded test
     vector<int> nums = {1, 1, 2, 1, 1};
     int k = 3;
 

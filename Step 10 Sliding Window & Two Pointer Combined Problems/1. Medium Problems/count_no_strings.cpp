@@ -1,33 +1,24 @@
-#include <iostream>
-#include <string>
-#include <vector>
+#include<bits/stdc++.h>
 using namespace std;
 
-// The Solution class contains the logic to solve the problem.
 class Solution {
 public:
-    int numberOfSubstrings(std::string s) {
-        int count = 0;
+    int numberOfSubstrings(string s) {
+        int count=0;
         int n = s.size();
-        int left = 0;
-        vector<int> freq = {0, 0, 0}; // Frequency for 'a', 'b', 'c'
 
-        for (int right = 0; right < n; ++right) {
-            freq[s[right] - 'a']++; // Expand the window to the right
+        map<char,int> mp;
+        mp['a'] = -1;
+        mp['b'] = -1;
+        mp['c'] = -1;
 
-            // While the window is valid (contains 'a', 'b', and 'c'),
-            // add the number of valid substrings and shrink from the left.
-            while (freq[0] > 0 && freq[1] > 0 && freq[2] > 0) {
-                // If the window [left..right] is valid, then any substring
-                // starting at 'left' and ending at 'right' or later is also valid.
-                // There are (n - right) such substrings.
-                count += (n - right);
-                
-                // Shrink the window from the left
-                freq[s[left] - 'a']--;
-                left++;
+        for(int i=0; i<n; i++){
+            mp[s[i]] = i;
+            if(mp['a']!=-1 && mp['b']!=-1 && mp['c']!=-1){
+                count = count + (1 + min(mp['a'], min(mp['b'], mp['c'])));
             }
         }
+
         return count;
     }
 };

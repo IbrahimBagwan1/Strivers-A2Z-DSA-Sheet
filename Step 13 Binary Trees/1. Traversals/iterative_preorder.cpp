@@ -13,7 +13,7 @@ struct Node {
     }
 };
 
-// ✅ You will implement this function
+// You will implement this function
 vector<int> preorder(Node* root) {
     vector<int> traversal;
     if(root==NULL) return traversal;

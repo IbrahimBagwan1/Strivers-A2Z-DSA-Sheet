@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Binary tree node structure
@@ -13,35 +13,50 @@ struct Node {
     }
 };
 
-// Function to create a new node
-Node* createNode(int val) {
-    return new Node(val);
-}
+// You will implement this function
+vector<int> postorder(Node* root) {
+    vector<int> traversal;
+    if(root==NULL) return traversal;
+    stack<Node*> st;
+    st.push(root);
 
-// Example function to build a sample tree
-Node* buildTree() {
-    Node* root = createNode(1);
-    root->left = createNode(2);
-    root->right = createNode(3);
-    root->left->left = createNode(4);
-    root->left->right = createNode(5);
-    return root;
-}
+    while(!st.empty()){
+        Node* node = st.top(); st.pop();
 
-//  You need to implement this function
-void inorder(Node* root) {
-    if(root!=nullptr){
-      inorder(root->left);
-      inorder(root->right);
-      cout<< root->data<< " ";
+        traversal.push_back(node->data);
+        if(node->left != NULL) st.push(node->left);
+        if(node->right != NULL) st.push(node->right);
     }
+
+    return traversal;
+}
+
+// Helper function to build a sample tree
+Node* buildTree() {
+    /*
+           1
+          / \
+         2   3
+        / \
+       4   5
+    */
+    Node* root = new Node(1);
+    root->left = new Node(2);
+    root->right = new Node(3);
+    root->left->left = new Node(4);
+    root->left->right = new Node(5);
+    return root;
 }
 
 int main() {
     Node* root = buildTree();
-    
-    cout << "Inorder Traversal: ";
-    inorder(root);
+
+    vector<int> traversal = postorder(root);
+
+    cout << "PostOrder Traversal: ";
+    for(int val : traversal) {
+        cout << val << " ";
+    }
     cout << endl;
 
     return 0;

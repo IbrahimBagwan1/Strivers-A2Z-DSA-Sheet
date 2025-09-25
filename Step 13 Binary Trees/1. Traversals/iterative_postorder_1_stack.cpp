@@ -17,23 +17,30 @@ struct Node {
 vector<int> postorder(Node* root) {
     vector<int> traversal;
     if(root==NULL) return traversal;
-    stack<Node*> st1;
-    stack<Node*> st2;
+    stack<Node*> st;
 
-    Node* node = root;
-    st1.push(node);
-    while(!st1.empty()){
-        node = st1.top(); st1.pop();
-        st2.push(node);
+    Node* curr = root;
 
-        if(node->left != NULL) st1.push(node->left);
-        if(node->right != NULL) st1.push(node->right);
-    }
-
-    while(!st2.empty()){
-        int topElement = st2.top()->data;
-        st2.pop();
-        traversal.push_back(topElement);
+    while(curr != NULL || !st.empty()){
+        if(curr != NULL){
+            st.push(curr);
+            curr= curr->left;
+        }
+        else{
+            Node* temp = st.top()->right;
+            
+            if(temp==NULL){
+                temp = st.top(); st.pop();
+                traversal.push_back(temp->data);
+                while(!st.empty() && temp == st.top()->right){
+                    temp = st.top(); st.pop();
+                    traversal.push_back(temp->data);
+                }
+            }
+            else{
+                curr = temp;
+            }
+        }
     }
 
     return traversal;

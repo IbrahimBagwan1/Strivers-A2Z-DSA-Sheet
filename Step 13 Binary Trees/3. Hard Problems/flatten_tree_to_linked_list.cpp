@@ -19,6 +19,22 @@ public:
         root->left = NULL;
         prev = root;
     }
+
+    // iterative solution .
+    void flatten2(TreeNode* root) {
+        TreeNode* cur = root;
+        while(cur!=NULL){
+            if(cur->left!=NULL){
+                TreeNode* prev = cur->left;
+                while(prev->right!=NULL){
+                  prev = prev->right;
+                }
+                prev->right = cur->right;
+                cur->right = cur->left;
+            }
+            cur = cur->right;
+        }
+    }    
 };
 
 // Function to print the flattened tree (like a linked list)
@@ -45,7 +61,7 @@ int main() {
     root->right->right = new TreeNode(6);
 
     Solution sol;
-    sol.flatten(root);
+    sol.flatten2(root);
 
     cout << "Flattened tree: ";
     printFlattened(root);

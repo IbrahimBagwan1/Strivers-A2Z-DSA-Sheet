@@ -15,4 +15,14 @@ public:
         }
         return reverse;
     }
+
+    int reverese(int x){
+        int rev = 0;
+
+        while(x!=0){
+            int last = x%10;
+            x = x/10;
+            rev = rev *10 + last;
+        }
+    }
 };

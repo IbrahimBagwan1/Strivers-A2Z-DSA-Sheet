@@ -12,21 +12,24 @@ public:
     return count;
   }
 
-  bool isArmstrong(int n) {
-    int dig = count_dig(n);
-    int dup = n;
-    int sum = 0;
-    while (n > 0) {
-      int last = n % 10;
-      n /= 10;
-      int ans = 1;
-      for (int i = 0; i < dig; i++) {
-        ans = ans * last;
+  bool isArmstrong(int n){
+    int length_dig = count_dig(n);
+    int duplicate = n ;
+    int sum=0;
+
+    while (n!=0){
+      int last = n%10;
+      n/=10;
+      int root=1;
+      for(int i=0; i<length_dig; i++){
+        root = root * last;
       }
-      sum = sum + ans;
+      sum += root;
     }
-    return (sum == dup);
+    return (sum==duplicate);
   }
+
+
 };
 
 int main() {

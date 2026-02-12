@@ -7,12 +7,12 @@ public:
   bool check(vector<int>& nums) {
     int count = 0;
     int n = nums.size();
-    for (int i = 0; i < n; ++i) {
-      if (nums[i % n] > nums[(i + 1) % n]) {
-        count++;
-      }
+    for (int i=0; i<2*n; i++){
+      if(nums[i%n] <= nums[i+1 %n]) count++;
+      else count =1;
+      if(count==n) return true;
     }
-    return count <= 1;
+    return n==1;  
   }
 };
 

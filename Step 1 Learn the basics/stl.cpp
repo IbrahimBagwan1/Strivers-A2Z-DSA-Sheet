@@ -6,6 +6,7 @@
   // 4. Functors
 
 #include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
 // Pair
@@ -91,16 +92,24 @@ void queue_example(){
   q.pop();
 }
 
-// priority Queue
-void priority_queue(){
-  priority_queue<int> pq; // Maxheap
-  pq.push(10);
-  pq.back();
-  pq.top();
-  
-  priority_queue<int, vector<int> greater<int>> minheap; // this is MinHeap
 
+// priority Queue
+void demo_priority_queue() {
+    priority_queue<int> pq; // Max-heap
+    pq.push(10);
+    pq.push(20);
+    pq.push(5);
+
+    cout << "Top element (max): " << pq.top() << endl; // 20
+
+    priority_queue<int, vector<int>, greater<int>> minheap; // Min-heap
+    minheap.push(10);
+    minheap.push(20);
+    minheap.push(5);
+
+    cout << "Top element (min): " << minheap.top() << endl; // 5
 }
+
 
 // set
 #include<set>

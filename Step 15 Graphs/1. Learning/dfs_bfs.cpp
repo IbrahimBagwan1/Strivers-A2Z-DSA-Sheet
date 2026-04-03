@@ -14,6 +14,17 @@ public:
         }
     }
 
+    void helperDfsTraversal(int node, int visited[], vector<int> &dfs, vector<int> adj[]){ // just written twice for practicing....
+        visited[node] = 1;
+        dfs.push_back(node);
+
+        for(auto it : adj[node]){
+            if(!visited[it]){
+                helperDfsTraversal(it, visited, dfs, adj);
+            }
+        }
+    }
+
     vector<int> dfsOfGraph(int V, vector<int> adj[]) {
         vector<int> dfs;
         int visited[V] = {0};

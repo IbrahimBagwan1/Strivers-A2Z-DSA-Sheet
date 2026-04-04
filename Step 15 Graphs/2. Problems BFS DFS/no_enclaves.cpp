@@ -57,17 +57,17 @@ int main() {
     
     // Test case 1
     vector<vector<int>> board1 = {{1, 1, 1, 1, 1},
-                                   {1, 0, 1, 0, 1},
-                                   {1, 0, 1, 0, 1},
-                                   {1, 0, 1, 0, 1},
-                                   {1, 1, 1, 1, 1}};
+                                  {1, 0, 1, 0, 1},
+                                  {1, 0, 1, 0, 1},
+                                  {1, 0, 1, 0, 1},
+                                  {1, 1, 1, 1, 1}};
     cout << "Test case 1: " << sol.numEnclaves(board1) << endl;
     
     // Test case 2
     vector<vector<int>> board2 = {{0, 0, 0, 1, 1},
-                                   {0, 1, 1, 1, 0},
-                                   {0, 1, 0, 1, 0},
-                                   {1, 1, 0, 0, 0}};
+                                  {0, 1, 1, 1, 0},
+                                  {0, 1, 0, 1, 0},
+                                  {1, 1, 0, 0, 0}};
     cout << "Test case 2: " << sol.numEnclaves(board2) << endl;
     
     return 0;

@@ -32,7 +32,7 @@ Striver's A2Z DSA Sheet is a structured guide designed by [Raj Vikramaditya (Str
 
 ## 🛠️ Technologies Used
 
-- **Languages**: C++, Python, JavaScript (where applicable)
+- **Languages**: C++
 - **Tools**: Git, GitHub, VS Code
 - **Approach**: Clean code, optimal solutions, inline comments
 

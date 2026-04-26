@@ -42,9 +42,8 @@ int main(){
   }
 
   for(int i=1; i<n ;i++){
-    vector<int> cur(capacity+1, 0);
     
-    for(int cap=1; cap<=capacity; cap++){
+    for(int cap=capacity; cap>=0; cap--){
 
       int notTake = prev[cap];
       int take =0;
@@ -52,9 +51,8 @@ int main(){
         take = profits[i] + prev[cap-weights[i]];
       }
 
-      cur[cap] = max(take, notTake);
+      prev[cap] = max(take, notTake);
     }
-    prev = cur;
   }
 
   cout<< prev[capacity];

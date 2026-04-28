@@ -34,7 +34,7 @@ public:
                 if(str1[lens1-1] == str2[lens2-1]){
                     dp[i][j] =  1+ dp[i-1][j-1];
                 }
-                else dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
+                else dp[i][j] = max(dp[i-1][j], dp[i][j-1]); // else take the maximum till this index.
             }
         }
 

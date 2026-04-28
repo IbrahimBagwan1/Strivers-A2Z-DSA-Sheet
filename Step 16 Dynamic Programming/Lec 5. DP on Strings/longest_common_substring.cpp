@@ -17,18 +17,19 @@ public:
       int m = len1+1;// 6
       int n = len2+1;// 6
       vector<vector<int>> dp(m, vector<int> (n, 0));
-
+      int ans = 0;
       for(int i=1; i<m; i++){
         for(int j=1; j<n; j++){
           if(str1[i-1] == str2[j-1]){
             dp[i][j] = dp[i-1][j-1] +1;
+            ans = max(ans, dp[i][j]);
           }
 
           else dp[i][j] =0;
         }
       }
 
-      return dp[m-1][n-1];
+      return ans;
   }
 
 };

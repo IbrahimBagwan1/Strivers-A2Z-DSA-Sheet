@@ -51,7 +51,7 @@ public:
         node->setEnd();
     }
 
-    // 🔥 Check if ALL prefixes exist
+    // Check if ALL prefixes exist
     bool checkAllPrefixes(string word) {
         Node* node = root;
         for(char ch : word) {

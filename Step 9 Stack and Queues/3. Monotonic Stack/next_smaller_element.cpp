@@ -6,7 +6,7 @@ public:
     vector<int> nextSmallerElements(const vector<int>& nums) {
         int n = nums.size();
         vector<int> nextSmaller(n, -1);
-        stack<int> st;
+        stack<int> st; 
 
         for (int i = n - 1; i >= 0; i--) {
             int current = nums[i];

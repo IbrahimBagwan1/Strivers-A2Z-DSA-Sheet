@@ -17,9 +17,9 @@ public:
         int right = 2*i + 2;
 
         if (left < n && arr[left] < arr[smallest])
-            smallest = left;
+            smallest = left; // if left is smaller then smallest is left.
         if (right < n && arr[right] < arr[smallest])
-            smallest = right;
+            smallest = right; // if right is smaller then both, we will have smallest as right.
 
         if (smallest != i) {
             swap(arr[i], arr[smallest]);

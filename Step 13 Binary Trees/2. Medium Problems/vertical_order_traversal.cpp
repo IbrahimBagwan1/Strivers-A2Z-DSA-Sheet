@@ -53,7 +53,7 @@ int main() {
              /  \
             15   7
 
-    Expected vertical order traversal:
+    Expected vertical order traversal for the Tree:
     [
       [9],
       [3, 15],

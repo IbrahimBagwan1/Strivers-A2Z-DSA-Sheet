@@ -17,8 +17,8 @@ class Solution{
         }
 
         void helper(TreeNode* root, vector<vector<int>> &rootToNode, vector<int> &temp){
-          if(root==NULL) return;  
-          if(isLeaf(root)){
+            if(root==NULL) return;  
+            if(isLeaf(root)){
                 temp.push_back(root->val);
                 rootToNode.push_back(temp);
                 temp.pop_back();

@@ -13,3 +13,9 @@ public:
         return count;
     }
 };
+
+int main(){
+    Solution sol;
+    cout << sol.countDigit(44);
+    return 0;
+}

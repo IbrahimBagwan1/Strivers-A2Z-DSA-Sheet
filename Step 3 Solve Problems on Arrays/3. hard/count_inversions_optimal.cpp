@@ -42,12 +42,12 @@ public:
     }
 
     void merge_sort(vector<int>& nums, int lo, int hi){
-        if(lo<hi){
-            int mid = lo + (hi-lo)/2;
-            merge_sort(nums, lo, mid);
-            merge_sort(nums, mid+1, hi);
-            merge(nums, lo, mid, hi);
-        }
+      if(lo>=hi) return;
+      
+      int mid = lo + (hi-lo)/2;
+      merge_sort(nums, lo, mid);
+      merge_sort(nums, mid+1, hi);
+      merge(nums, lo, mid, hi);
     }
 
     long long int numberOfInversions(vector<int> nums) {

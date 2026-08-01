@@ -37,7 +37,7 @@ public:
 };
 
 int main() {
-    // 🔹 Hardcoded matrix (each row is sorted)
+    // Input (each row is sorted)
     vector<vector<int>> matrix = {
         {1, 3, 5},
         {2, 6, 9},

@@ -5,7 +5,7 @@ using namespace std;
 
 class Solution {
 public:
-  int maximum_sum(vector<int>& arr, int n) {
+  int total_sum(vector<int>& arr, int n) {
     int sumi = 0;
     for (int i = 0; i < n; i++) {
       sumi += arr[i];
@@ -22,16 +22,21 @@ public:
 
   bool check_pages(vector<int>& nums, int m, int pages) {
     int cnt = 1, sum = 0;
+
     for (int i = 0; i < nums.size(); i++) {
+
       if (nums[i] > pages) return false;
+
       if (sum + nums[i] > pages) {
         cnt++;
         sum = nums[i];
         if (cnt > m) return false;
+
       } else {
         sum += nums[i];
       }
     }
+    
     return true;
   }
 
@@ -39,7 +44,7 @@ public:
     int n = nums.size();
     if (m > n) return -1;
     int left = minimum(nums, n);
-    int right = maximum_sum(nums, n);
+    int right = total_sum(nums, n);
     int final_ans = -1;
     while (left <= right) {
       int mid = left + (right - left) / 2;

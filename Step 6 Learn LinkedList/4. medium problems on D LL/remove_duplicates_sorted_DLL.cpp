@@ -10,6 +10,8 @@ struct ListNode {
 
 class Solution {
 public:
+// head -> 1 <-> 1 <-> 3 <-> 3 <-> 4 <-> 5 
+// standard comparison using i,j and removing connections.
     ListNode * removeDuplicates(ListNode *head) {
         if(head == NULL) return NULL;
         if(head->next == NULL) return head;

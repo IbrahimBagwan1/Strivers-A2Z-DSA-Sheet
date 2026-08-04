@@ -6,9 +6,12 @@ public:
     vector<vector<int>> primeFactors(vector<int>& queries) {
         int n = queries.size();
         int maxElement = *max_element(queries.begin(), queries.end());
-        vector<int> spf(maxElement+1);
-        for(int i=2; i<=maxElement; i++) spf[i]=i;
 
+        vector<int> spf(maxElement+1); // spf -> smallest prime factor
+        
+        for(int i=2; i<=maxElement; i++) spf[i]=i;
+        
+        // creating the seive table.
         for(int i=2; i*i<=maxElement; i++){
             if(spf[i] == i){
                 for(int j=i*i; j<=maxElement; j+=i){
@@ -18,6 +21,8 @@ public:
                 }
             }
         }
+
+        // building the answers.
         vector<vector<int>> ans;
         for(int i=0; i<n; i++){
             int num = queries[i];

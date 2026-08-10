@@ -23,7 +23,7 @@ vector<int> inorder(Node* root) {
     while(true){
         if(node != NULL){
             st.push(node);
-            node = node->left;
+            node = node->left; // go to left left left.
         }
         else{
             if(st.empty()) break;

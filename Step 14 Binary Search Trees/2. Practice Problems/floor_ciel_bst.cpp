@@ -25,7 +25,7 @@ public:
                 ceilVal = cur->data;   // possible ceil
                 cur = cur->left;
             } 
-            else {
+            else { // cur->data < key then this will execute.
                 floor = cur->data;     // possible floor
                 cur = cur->right;
             }
